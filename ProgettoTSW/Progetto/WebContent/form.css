@@ -1,0 +1,115 @@
+@charset "ISO-8859-1";
+
+body{
+ margin: 0;
+ background-image:url("C:/Users/ianto/OneDrive/Desktop/sito TSW/immagini/des.jpg"); /* DA CAMBIARE */
+ min-height: 500px;
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover; }
+
+/*------------------------------------------------------------*/
+
+h1#ciro {
+ color:#1a0d00; /* DA MODIFICARE */
+ text-align:center; }
+
+div#blocco {
+ background-image:url("./immagini/mi.jpg");
+ flex-wrap: wrap;
+ height: 50px; 
+ margin-top: -25px; } 
+ 
+ h3.mob {
+ color:#1a0d00; /* DA MODIFICARE */
+ position:relative;
+ left: 70px; }
+
+/*---------------------------------------------------------------*/
+/*REGISTRAZIONE*/
+
+div#diva{
+ overflow: hidden;
+ background-color: #FFFFFF; 
+ border-top-style: solid;
+ border-top-color: #000000;}
+
+div#div{
+ overflow: hidden;
+ background-color: #FFFFFF; }
+
+/*-----------------------------------------------------------------*/
+
+ 
+/*INFORMAZIONI*/
+
+.car{
+ display:grid;
+ grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+ gap: 20px; }
+
+.link{
+ position: relative;
+ width: 170px;
+ height: 10px; }
+
+div#tr{
+ margin-top: -10px;  } 
+
+div#ph{
+ height: 150px; 
+ background-color: #7CB342;
+ height: 180px; } 
+
+h3#ac{
+ text-align:center; }
+
+.lin{
+ color:rgb(54,34,4); }
+
+.lin:hover{
+ color:rgb(0,100,0); }
+
+/*--------------------------------------------------------------*/
+a#abc:link {
+ text-decoration: none;
+}
+
+button#ab{
+ float: right; 
+ margin-right: 5px; }
+
+#mail:hover{
+ background-color: #9CCC65; }
+
+#pass:hover{
+ background-color: #9CCC65; }
+
+#cardno:hover{
+ background-color: #9CCC65; }
+
+#numb:hover{
+ background-color: #9CCC65; }
+
+#datasc:hover{
+ background-color: #9CCC65; }
+
+/*---------------------------------------------------------*/
+.btn{
+ width: 150px;
+ height: 45px;
+ border-radius: 45px;
+ cursor: pointer;
+ border: none;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-weight: bold;
+ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+ transition: all 0.3s ease; }
+
+.btn:hover{
+ background: #558B2F;
+ transform: translateY(-7px);
+ color: #FFFFFF;
+ box-shadow: 0px 10px 25px rgba(46, 223, 229, 0.445); }

@@ -1,0 +1,371 @@
+@charset "ISO-8859-1";
+
+body{
+ margin: 0;
+ background-image:url("./immagini/des.jpg"); /* DA CAMBIARE */
+ min-height: 500px;
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover; }
+
+/*------------------------------------------------------------*/
+
+h1#ciro {
+ color:#1a0d00; /* DA MODIFICARE */
+ text-align:center; }
+
+div#blocco {
+ background-image:url("./immagini/mi.jpg");
+ flex-wrap: wrap; } 
+/*--------------------------------------------------------------*/
+/*MENU*/
+
+ul.topnav {
+ list-style-type: none;
+ padding: 0;
+ overflow: hidden;
+ background-color: #FFFFFF;
+ justify-content: space-between;
+ flex-wrap: wrap; }
+
+ul.topnav li {
+ float: left; }
+
+ul.topnav li a {
+ display: block;
+ color:#FFFFFF;
+ text-align: center;
+ padding: 20px 50px;
+ text-decoration: none; 
+ color: inherit; }
+
+ul.topnav li a:hover:not(.active){
+ background-color: #AED581; }
+
+ul.topnav li a.active{
+ background-color: #04AA6D; }  
+
+ul.topnav li.right{
+ float: right; }
+
+@media screen and (max-width: 600px) {
+ ul.topnav li.right, 
+ ul.topnav li {
+  float: none; }
+}
+/*-----------------------------------------------------------------*/
+/*MENU' LATERALE*/
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box; }
+
+.box{
+ position:relative;
+ height: 7.5px; }
+
+input#in{
+ width:50px;
+ height:50px;
+ background: #000000;
+ apparence:none;
+ position:relative;
+ cursor: pointer;
+ border-radius:10px;
+ display: flex;
+ justify-content: center;
+ align-items:center; }
+
+input#in::before{
+ content: '\f550';
+ position: absolute;
+ font-family: 'Font Awesome 5 Free';
+ font-weight:700;
+ color:#FFFFFF; /* NON TOCCARE */
+ align-items:center; 
+ background-image:url("./immagini/tratti.png"); 
+ background-size: 50% 50%; }
+
+.nav{
+ position: absolute;
+ top: 38px;
+ left:38px;
+ width:150px;
+ height:150px;
+ background:#9CCC65; /* SFONDO DEL BOX APERTO */
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ flex-wrap:wrap;
+ border-radius:10px;
+ box-shadow: 0 0 30px #000026;
+ backdrop-filter:blur(30px);
+ transform:scale(0);
+ transform-origin:top left;
+ transition: transform 0.4s; }
+
+.nav a{
+ margin:15px;
+ color: rgba(255, 255, 255, 0.804); }
+
+.nav a:hover{
+ color: #000000;
+ animation: anim 0.5s; }
+
+@keyframes anim{
+ 0%{
+  transform: rotate(20deg); }
+ 50%{
+  transform: rotate(-20deg); }
+ 100%{
+  transform: rotate(0deg); }
+}
+
+input:checked ~ .nav{
+ transform:scale(1); }
+
+input:checked:before{
+ content: '\f00d'; }
+
+/*------------------------------------------------------*/
+/*PRODOTTI*/
+
+.cards{
+ display:grid;
+ grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+ gap: 20px; }
+
+.card{
+ position: relative;
+ overflow: hidden;
+ width: 200px;
+ height:300px;
+ object-fit: cover; }
+
+#rr{
+ background-color: #D2D2D2; /* GRIGIO */
+ border-radius: 10px; 
+ margin-bottom: 5px; 
+ margin-left: 5px; }
+
+#rr:hover{
+ background-color: #9C9C9C; } /* GRIGIO SCURO */
+
+.card-image{
+ position: relative;
+ inset: 0;
+ width: 90%;
+ height: 90%;
+ object-fit: contain;
+ transition: transform .75s;
+ margin-left: 10px; }
+
+.card:hover .card-image{
+ transform: scale(1.15); }
+
+.card-title{
+ position: absolute;
+ left: 15px;
+ bottom: 0px;
+ font-size: 20px; }
+
+div#primo{
+ background-color: #FFFFFF; /* DA CAMBIARE */
+ margin: 20px; 
+ border-radius: 10px; }
+
+#genn {
+ text-align:center; }
+
+/*--------------------------------------------------------*/
+/*SPEDIZIONI/TRACCIA*/
+
+div#pri{
+ background-color: #AED581; 
+ height: 150px; }
+ 
+/*--------------------------------------------------------*/
+/*SOCIAL*/
+
+.carta{
+ width: 200px;
+ height: 220px;
+ position: relative;
+ object-fit: cover;
+ background-color: transparent;
+ transition: transform 0.8s;
+ transform-style: preserve-3d; }
+
+.carta:hover{
+ transform:rotateY(180deg);
+ cursor:pointer; }
+
+.front, .back{
+ height: 100%;
+ width: 100%;
+ background:#fff;
+ padding-top: 20px;
+ position: absolute;
+ border-radius: 10px;
+ backface-visibility: hidden;
+ display: table-row; }
+
+.front{
+ background: rgb(0,143,57);
+ background: linear-gradient(90deg, rgba(40,114,51,1)0%, rgba(0,143,57,1)35%, rgba(150,75,0,1)100%); }
+
+.img{
+ width: 100px;
+ height: 100px;
+ object-fit: contain; }
+
+.back{
+ transform:rotateY(180deg);
+ background:#689F38; }
+
+.container{
+ position: relative;
+ width: 375px;
+ height:100px; }
+
+h3#shesh {
+ text-align:center; }
+
+h2#cicc{
+ font-size:21px; }
+
+div#we{
+ height: 250px; 
+ background-color: #9CCC65; } 
+
+/*-----------------------------------------------------------*/
+/*INFORMAZIONI*/
+
+.car{
+ display:grid;
+ grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+ gap: 20px; }
+
+.link{
+ position: relative;
+ width: 170px;
+ height:20px; }
+
+div#ph{
+ height: 150px; 
+ background-color: #7CB342; } 
+
+h3#ac{
+ text-align:center; }
+
+.lin{
+ color:rgb(54,34,4); }
+
+.lin:hover{
+ color:rgb(0,100,0); }
+
+/*--------------------------------------------------------------*/
+/*SLIDER*/
+  
+.mySlides{
+ display: none; 
+ overflow: hidden; }
+
+.slideshow-container {
+ max-width: 1000px;
+ position: relative;
+ margin: auto; 
+ overflow: hidden; }
+
+.prev, .pross {
+ cursor: pointer;
+ position: absolute;
+ top: 50%;
+ width: auto;
+ padding: 16px;
+ margin-top: -22px;
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+ transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+ user-select: none; }
+
+.pross {
+ right: 0;
+ border-radius: 3px 0 0 3px; }
+
+.prev:hover, .pross:hover {
+ background-color: rgba(0,0,0,0.8); }
+
+.dot{
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease; }
+
+.active, .dot:hover {
+ background-color: #717171; }
+
+.fade{
+ animation-name: fade;
+ animation-duration: 1.5s; }
+
+@media only screen and (max-width: 300px) {
+ .prev, .pross, .text {
+  font-size: 11px; } 
+}
+
+#im{
+ width:100%;
+
+ background-color: #000000; }
+
+#sa{
+ text-align:center; }
+
+#ppp{
+ text-align:center; 
+ font-size: 20px;
+ color:#5D4037; }
+
+/*-------------------------------------------------*/
+/*SERACH BAR*/
+
+form.fr input[type=text] {
+  padding: 7px;
+  font-size: 17px;
+  float: left;
+  width: 80%;
+  background: #FFFFFF;
+}
+
+.bott {
+ padding: 5.5px;
+ float: left;
+ width: 20%;
+ background: #689F38;
+ color: white;
+ font-size: 25px;
+ cursor: pointer; }
+
+.bott:hover {
+  background: #558B2F;
+}
+
+form.fr::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sdf{
+ text-align:center; 
+ font-size: 20px; 
+ color:#000000; }
